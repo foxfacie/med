@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websiteox - Sachin Yadav | Web Developer & SEO Specialist</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-256x256.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Websiteox - Professional Web Development & SEO Services by Sachin Yadav. Transform ideas into stunning digital experiences with expertise in web development, SEO optimization, and android app development.">
+    <meta name="keywords" content="websiteox, web developer, SEO specialist, android app development, wordpress development, UI/UX design, digital marketing, Delhi, India">
+    <meta name="author" content="Sachin Yadav">
+    <meta name="theme-color" content="#6366f1">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Safari Browser Warning -->
+    <div id="safari-warning" class="safari-warning hidden">
+        <div class="safari-warning-content">
+            <div class="safari-warning-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="safari-warning-text">
+                <h3>Attention!</h3>
+                <p>Some features may not work correctly in Safari. We recommend using Chrome, Firefox or Edge for the best experience.</p>
+            </div>
+            <button class="safari-warning-close" id="safari-warning-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen active">
+        <div class="loading-content">
+            <div class="start-prompt" id="start-prompt">
+                <span class="prompt-text">click me</span>
+                <div class="prompt-pulse"></div>
+            </div>
+            <div class="typing-container" id="typing-container" style="display: none;">
+                <span id="typing-text" class="typing-text"></span>
+                <span id="cursor" class="cursor">|</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Screen - 3D Cube -->
+    <div id="main-screen" class="screen">
+        <!-- Starfield -->
+        <div class="starfield" id="starfield"></div>
+        <div class="shooting-stars" id="shooting-stars"></div>
+        <div class="space-particles" id="space-particles"></div>
+        <div class="asteroids" id="asteroids"></div>
+        
+        <!-- Nebulas -->
+        <div class="nebula purple" style="width: 300px; height: 300px; top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="nebula blue" style="width: 400px; height: 400px; top: 60%; right: 15%; animation-delay: -5s;"></div>
+        <div class="nebula pink" style="width: 250px; height: 250px; bottom: 20%; left: 10%; animation-delay: -10s;"></div>
+        
+        <!-- Mobile Horizontal Slider -->
+        <div class="mobile-slider-container" id="mobile-slider">
+            <div class="mobile-slides-wrapper" id="mobile-slides-wrapper">
+                <!-- Slide 1: Main -->
+                <div class="mobile-slide" data-slide="0">
+                    <div class="face-content">
+                        <h1 class="main-title">Websiteox</h1>
+                        <p class="main-subtitle">Web Developer & SEO Specialist</p>
+                        <div class="main-tagline">Transform ideas into stunning digital experiences</div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: About -->
+                <div class="mobile-slide" data-slide="1">
+                    <div class="face-content">
+                        <h2 class="face-title">About Me</h2>
+                        <div class="about-content">
+                            <div class="intro-section">
+                                <h3><strong>Sachin Yadav</strong></h3>
+                                <p class="intro-text">I'm a passionate web developer and digital marketer from Delhi, India. With expertise in creating responsive websites, SEO optimization, and android app development, I help businesses establish a strong online presence.</p>
+                                <p class="intro-text">My approach combines technical expertise with creative design to deliver websites and apps that not only look fantastic but also perform exceptionally well in search engines. I believe in creating digital experiences that drive real business results.</p>
+                            </div>
+                            
+                            <div class="principles-section">
+                                <h4>My Principles</h4>
+                                <div class="principles-grid">
+                                    <div class="principle-card">
+                                        <i class="fas fa-code"></i>
+                                        <h5>Clean Code</h5>
+                                        <p>Writing maintainable and scalable code</p>
+                                    </div>
+                                    <div class="principle-card">
+                                        <i class="fas fa-search"></i>
+                                        <h5>SEO First</h5>
+                                        <p>Optimizing for search engine visibility</p>
+                                    </div>
+                                    <div class="principle-card">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h5>Mobile First</h5>
+                                        <p>Responsive design for all devices</p>
+                                    </div>
+                                    <div class="principle-card">
+                                        <i class="fas fa-rocket"></i>
+                                        <h5>Performance</h5>
+                                        <p>Fast loading and optimized websites</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="motivation-section">
+                                <p class="motivation-text">
+                                    <i class="fas fa-heart"></i>
+                                    <strong>Passionate about creating digital solutions that drive business growth</strong>
+                                </p>
+                            </div>
+                            
+                            <div class="stats">
+                                <div class="stat">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Projects Completed</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Client Satisfaction</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Skills -->
+                <div class="mobile-slide" data-slide="2">
+                    <div class="face-content">
+                        <h2 class="face-title">My Skills</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-wordpress"></i>
+                                <span>WordPress</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-search"></i>
+                                <span>SEO</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-android"></i>
+                                <span>Android</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-palette"></i>
+                                <span>UI/UX Design</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-server"></i>
+                                <span>Web Hosting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4: Services -->
+                <div class="mobile-slide" data-slide="3">
+                    <div class="face-content">
+                        <h2 class="face-title">My Services</h2>
+                        <div class="services-content">
+                            <div class="service-item">
+                                <h3><i class="fas fa-globe"></i> Web Development</h3>
+                                <p>Custom website development with responsive design, ensuring your site looks perfect on all devices. I build fast, scalable, and user-friendly websites that convert visitors into customers.</p>
+                            </div>
+                            
+                            <div class="service-item">
+                                <h3><i class="fas fa-search"></i> SEO Optimization</h3>
+                                <p>Comprehensive SEO services to improve your website's visibility in search engines. I use proven techniques to help your business rank higher and attract more organic traffic.</p>
+                            </div>
+                            
+                            <div class="service-item">
+                                <h3><i class="fab fa-android"></i> Custom App Development</h3>
+                                <p>I create high-performance, scalable mobile apps with seamless user experiences for Android, helping you engage users and drive growth.</p>
+                            </div>
+                            
+                            <div class="service-item">
+                                <h3><i class="fab fa-wordpress"></i> WordPress Development</h3>
+                                <p>Custom WordPress solutions including theme development, plugin customization, and performance optimization. I create user-friendly WordPress sites that are easy to manage.</p>
+                            </div>
+                            
+                            <div class="service-item">
+                                <h3><i class="fas fa-palette"></i> UI/UX Design</h3>
+                                <p>User-centered design solutions that create intuitive and engaging user experiences. I design interfaces that are not only beautiful but also highly functional and user-friendly.</p>
+                            </div>
+                            
+                            <div class="service-item">
+                                <h3><i class="fas fa-server"></i> Web Hosting & Maintenance</h3>
+                                <p>Reliable web hosting solutions and ongoing maintenance services to keep your website secure, up-to-date, and performing at its best.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 5: Projects -->
+                <div class="mobile-slide" data-slide="4">
+                    <div class="face-content">
+                        <h2 class="face-title">My Work</h2>
+                        <div class="projects-content" id="mobile-projects-content">
+                            <div class="project-item">
+                                <div class="project-language">E-Commerce</div>
+                                <h3>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    E-Commerce Website
+                                </h3>
+                                <p>A modern e-commerce platform with seamless checkout process and mobile-friendly design.</p>
+                                <div class="project-tech">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Node.js</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-item">
+                                <div class="project-language">Corporate</div>
+                                <h3>
+                                    <i class="fas fa-building"></i>
+                                    Corporate Website Redesign
+                                </h3>
+                                <p>Modern redesign of a corporate website focusing on user experience and conversion optimization.</p>
+                                <div class="project-tech">
+                                    <span>WordPress</span>
+                                    <span>SEO</span>
+                                    <span>UI/UX</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-item">
+                                <div class="project-language">Mobile App</div>
+                                <h3>
+                                    <i class="fab fa-android"></i>
+                                    Android Mobile App
+                                </h3>
+                                <p>High-performance mobile application with seamless user experience and modern design.</p>
+                                <div class="project-tech">
+                                    <span>Android</span>
+                                    <span>Java</span>
+                                    <span>Kotlin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 6: Contact -->
+                <div class="mobile-slide" data-slide="5">
+                    <div class="face-content">
+                        <h2 class="face-title">Contact</h2>
+                        <div class="contact-links">
+                            <a href="https://www.linkedin.com/in/webdevsachin/" target="_blank" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Webdevyadav" target="_blank" class="contact-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://x.com/webdevsachin" target="_blank" class="contact-link">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://www.instagram.com/devsachinyadav/" target="_blank" class="contact-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="mailto:webdevsachinyadav@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> webdevsachinyadav@gmail.com</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                        </div>
+                        <div class="contact-cta">
+                            Let's build something amazing together
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="mobile-navigation" id="mobile-navigation">
+                <button class="mobile-nav-btn" id="mobile-prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="mobile-slide-indicators" id="mobile-slide-indicators">
+                    <div class="mobile-slide-indicator active" data-slide="0"></div>
+                    <div class="mobile-slide-indicator" data-slide="1"></div>
+                    <div class="mobile-slide-indicator" data-slide="2"></div>
+                    <div class="mobile-slide-indicator" data-slide="3"></div>
+                    <div class="mobile-slide-indicator" data-slide="4"></div>
+                    <div class="mobile-slide-indicator" data-slide="5"></div>
+                </div>
+                
+                <button class="mobile-nav-btn" id="mobile-next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="cube-container">
+            <div class="cube-scene">
+                <div class="cube" id="cube">
+                    <!-- Front Face - Main -->
+                    <div class="cube-face cube-face--front" data-face="front">
+                        <div class="face-content">
+                            <h1 class="main-title">Websiteox</h1>
+                            <p class="main-subtitle">Web Developer & SEO Specialist</p>
+                            <div class="main-tagline">Transform ideas into stunning digital experiences</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Face - About -->
+                    <div class="cube-face cube-face--right" data-face="right">
+                        <div class="face-content">
+                            <h2 class="face-title">About Me</h2>
+                            <div class="about-content">
+                                <div class="intro-section">
+                                    <h3><strong>Sachin Yadav</strong></h3>
+                                    <p class="intro-text">I'm a passionate web developer and digital marketer from Delhi, India. With expertise in creating responsive websites, SEO optimization, and android app development, I help businesses establish a strong online presence.</p>
+                                    <p class="intro-text">My approach combines technical expertise with creative design to deliver websites and apps that not only look fantastic but also perform exceptionally well in search engines. I believe in creating digital experiences that drive real business results.</p>
+                                </div>
+                                
+                                <div class="principles-section">
+                                    <h4>My Principles</h4>
+                                    <div class="principles-grid">
+                                        <div class="principle-card">
+                                            <i class="fas fa-code"></i>
+                                            <h5>Clean Code</h5>
+                                            <p>Writing maintainable and scalable code</p>
+                                        </div>
+                                        <div class="principle-card">
+                                            <i class="fas fa-search"></i>
+                                            <h5>SEO First</h5>
+                                            <p>Optimizing for search engine visibility</p>
+                                        </div>
+                                        <div class="principle-card">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <h5>Mobile First</h5>
+                                            <p>Responsive design for all devices</p>
+                                        </div>
+                                        <div class="principle-card">
+                                            <i class="fas fa-rocket"></i>
+                                            <h5>Performance</h5>
+                                            <p>Fast loading and optimized websites</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="motivation-section">
+                                    <p class="motivation-text">
+                                        <i class="fas fa-heart"></i>
+                                        <strong>Passionate about creating digital solutions that drive business growth</strong>
+                                    </p>
+                                </div>
+                                
+                                <div class="stats">
+                                    <div class="stat">
+                                        <span class="stat-number">50+</span>
+                                        <span class="stat-label">Projects Completed</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">100%</span>
+                                        <span class="stat-label">Client Satisfaction</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Back Face - Skills -->
+                    <div class="cube-face cube-face--back" data-face="back">
+                        <div class="face-content">
+                            <h2 class="face-title">My Skills</h2>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-js-square"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-react"></i>
+                                    <span>React</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-node-js"></i>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-wordpress"></i>
+                                    <span>WordPress</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-search"></i>
+                                    <span>SEO</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-android"></i>
+                                    <span>Android</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-palette"></i>
+                                    <span>UI/UX Design</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-server"></i>
+                                    <span>Web Hosting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Left Face - Services -->
+                    <div class="cube-face cube-face--left" data-face="left">
+                        <div class="face-content">
+                            <h2 class="face-title">My Services</h2>
+                            <div class="services-content">
+                                <div class="service-item">
+                                    <h3><i class="fas fa-globe"></i> Web Development</h3>
+                                    <p>Custom website development with responsive design, ensuring your site looks perfect on all devices.</p>
+                                </div>
+                                
+                                <div class="service-item">
+                                    <h3><i class="fas fa-search"></i> SEO Optimization</h3>
+                                    <p>Comprehensive SEO services to improve your website's visibility in search engines.</p>
+                                </div>
+                                
+                                <div class="service-item">
+                                    <h3><i class="fab fa-android"></i> Custom App Development</h3>
+                                    <p>High-performance, scalable mobile apps with seamless user experiences for Android.</p>
+                                </div>
+                                
+                                <div class="service-item">
+                                    <h3><i class="fab fa-wordpress"></i> WordPress Development</h3>
+                                    <p>Custom WordPress solutions including theme development and plugin customization.</p>
+                                </div>
+                                
+                                <div class="service-item">
+                                    <h3><i class="fas fa-palette"></i> UI/UX Design</h3>
+                                    <p>User-centered design solutions that create intuitive and engaging user experiences.</p>
+                                </div>
+                                
+                                <div class="service-item">
+                                    <h3><i class="fas fa-server"></i> Web Hosting & Maintenance</h3>
+                                    <p>Reliable web hosting solutions and ongoing maintenance services.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Face - Projects -->
+                    <div class="cube-face cube-face--top" data-face="top">
+                        <div class="face-content">
+                            <h2 class="face-title">My Work</h2>
+                            <div class="projects-content" id="projects-content">
+                                <div class="project-item">
+                                    <div class="project-language">E-Commerce</div>
+                                    <h3>
+                                        <i class="fas fa-shopping-cart"></i>
+                                        E-Commerce Website
+                                    </h3>
+                                    <p>A modern e-commerce platform with seamless checkout process and mobile-friendly design.</p>
+                                    <div class="project-tech">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>JavaScript</span>
+                                        <span>Node.js</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-item">
+                                    <div class="project-language">Corporate</div>
+                                    <h3>
+                                        <i class="fas fa-building"></i>
+                                        Corporate Website Redesign
+                                    </h3>
+                                    <p>Modern redesign of a corporate website focusing on user experience and conversion optimization.</p>
+                                    <div class="project-tech">
+                                        <span>WordPress</span>
+                                        <span>SEO</span>
+                                        <span>UI/UX</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-item">
+                                    <div class="project-language">Mobile App</div>
+                                    <h3>
+                                        <i class="fab fa-android"></i>
+                                        Android Mobile App
+                                    </h3>
+                                    <p>High-performance mobile application with seamless user experience and modern design.</p>
+                                    <div class="project-tech">
+                                        <span>Android</span>
+                                        <span>Java</span>
+                                        <span>Kotlin</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bottom Face - Contact -->
+                    <div class="cube-face cube-face--bottom" data-face="bottom">
+                        <div class="face-content">
+                            <h2 class="face-title">Contact</h2>
+                            <div class="contact-links">
+                                <a href="https://www.linkedin.com/in/webdevsachin/" target="_blank" class="contact-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/Webdevyadav" target="_blank" class="contact-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://x.com/webdevsachin" target="_blank" class="contact-link">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="https://www.instagram.com/devsachinyadav/" target="_blank" class="contact-link">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="mailto:webdevsachinyadav@gmail.com" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
+                                </a>
+                            </div>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope"></i> webdevsachinyadav@gmail.com</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                            </div>
+                            <div class="contact-cta">
+                                Let's build something amazing together
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="cube-navigation">
+                <button class="nav-btn active" data-target="front" title="Main">
+                    <i class="fas fa-home"></i>
+                </button>
+                <button class="nav-btn" data-target="right" title="About">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="nav-btn" data-target="back" title="Skills">
+                    <i class="fas fa-code"></i>
+                </button>
+                <button class="nav-btn" data-target="left" title="Services">
+                    <i class="fas fa-briefcase"></i>
+                </button>
+                <button class="nav-btn" data-target="top" title="Projects">
+                    <i class="fas fa-rocket"></i>
+                </button>
+                <button class="nav-btn" data-target="bottom" title="Contact">
+                    <i class="fas fa-envelope"></i>
+                </button>
+                
+                <!-- Divider -->
+                <div class="nav-divider"></div>
+                
+                <!-- Music Control Button -->
+                <button class="nav-btn music-btn" id="music-toggle" title="Music">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Hint -->
+            <div class="mobile-hint" id="mobile-hint">
+                <i class="fas fa-hand-paper"></i>
+                <span>Swipe to navigate</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
