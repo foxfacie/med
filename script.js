@@ -611,9 +611,9 @@ class CubeController {
         hint.className = 'navigation-hint';
         hint.innerHTML = `
             <div class="hint-content">
-                <h3>Навигация по кубу</h3>
-                <p>• Кликайте по видимым граням</p>
-                <p>• Используйте кнопки навигации справа</p>
+                <h3>Navigating the cube</h3>
+                <p>• Click on the visible edges</p>
+                <p>• Use the navigation buttons on the right</p>
             </div>
         `;
         
